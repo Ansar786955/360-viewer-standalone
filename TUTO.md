@@ -13,10 +13,21 @@ This project provides a standalone 360-degree image viewer using Marzipano.
 
 ## How to run locally
 1. **Extract the ZIP**: Unzip `viewer_code.zip` on your computer.
-2. **Open the HTML**: Right-click on `360_standalone.html` and select "Open with" -> "Google Chrome" (or your preferred browser).
-3. **Important Note**: Some browsers block local files from loading images for security. If the viewer is empty, you need to run a small local server:
-   - If you have Python: Open terminal in the folder and run `python -m http.server 8000`, then go to `http://localhost:8000/360_standalone.html`.
-   - If you have VS Code: Use the "Live Server" extension.
+2. **Important Note**: Browsers block local files (`file://`) from loading for security. You **MUST** run a local server:
+
+### Option 1: Simple Server (Python)
+- Open the folder where you extracted the ZIP.
+- Open Terminal/Command Prompt in that folder.
+- Run: `python -m http.server 8000`
+- Open Browser and go to: `http://localhost:8000/360_standalone.html`
+
+### Option 2: VS Code (Live Server)
+- Open the folder in VS Code.
+- Install "Live Server" extension.
+- Click "Go Live" at the bottom right.
+
+### Option 3: Local Server Executable
+- If you don't have Python, you can use any small web server program like `http-server` (Node.js) or `Servez`.
 
 ## Direct Download
 [Download viewer_code.zip](./viewer_code.zip)
